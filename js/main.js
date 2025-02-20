@@ -36,3 +36,28 @@ const kittenThree = `<li class="card">
             
 
  catList.innerHTML = kittenOne + kittenTwo + kittenThree;
+
+ const plusButton = document.querySelector (".js-btn-add");
+ const plusForm = document.querySelector (".js-new-form");
+ const cancelButton = document.querySelector (".button-cancel");
+ const inputUrl = document.querySelector (".js-input-url");
+ const inputName = document.querySelector (".js-input-name");
+ const inputRaza = document.querySelector (".js-input-raza");
+ const inputDescription = document.querySelector (".js-input-description");
+
+ plusButton.addEventListener ("click", () => {
+    // console.log("haz click")
+    plusForm.classList.toggle("collapsed");
+
+ });
+
+ cancelButton.addEventListener ("click", () => {
+    /* console.log("click en cancel") */
+    plusForm.classList.add("collapsed");
+    inputUrl.value = ("");
+    inputName.value = ("");
+    inputRaza.value = ("");
+    inputDescription.value = ("");
+
+ });
+
