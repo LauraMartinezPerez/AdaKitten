@@ -13,4 +13,4 @@ const kittenOne = `<li class="card">
                 </li>`
 
  const catList = document.querySelector (`.list`);
- catList.innerHTML = kittenOne;           
+ catList.innerHTML = kittenOne;
