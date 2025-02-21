@@ -25,7 +25,7 @@
                 <ul class="menu">
                     <li class="item">
                         <button>
-                            <span class="fas fa-plus-circle"> </span>
+                            <span class="fas fa-plus-circle js-btn-add"> </span>
                         </button>
                     </li>
                 </ul>
@@ -34,13 +34,13 @@
     </header>
 
     <main>
-        <section class="new-form">
+        <section class="new-form collapsed js-new-form">
             <h2 class="title">¿Agregamos un nuevo gatito a Adalab?</h2>
             <form class="form">
-                <input class="input" type="text" placeholder="Url de la foto" required />
-                <input class="input" type="text" placeholder="Nombre" required />
-                <input class="input" type="text" placeholder="Raza" />
-                <input class="input" type="text" placeholder="Descripción" required />
+                <input class="input js-input-url" type="text" placeholder="Url de la foto" required />
+                <input class="input js-input-name" type="text" placeholder="Nombre" required />
+                <input class="input js-input-raza" type="text" placeholder="Raza" />
+                <input class="input js-input-description" type="text" placeholder="Descripción" required />
                 <button type="submit" class="button">Añadir</button>
                 <button type="button" class="button-cancel">Cancelar</button>
             </form>
@@ -54,37 +54,16 @@
         <section class="search">
             <h2 class="title">Filtrar / Buscar</h2>
             <form class="form">
-                <input class="input" type="text" placeholder="Descripción" />
-                <input class="input" type="select" name="raza" placeholder="Raza" id="raza" />
+                <input class="input js_in_search_desc" type="text" placeholder="Descripción" />
+                <input class="input js-raza" type="select" name="raza" placeholder="Raza" id="raza" />
 
-                <button type="submit" class="button">Buscar</button>
+                <button type="submit" class="button js_button-search">Buscar</button>
             </form>
         </section>
 
         <section class="data">
             <ul class="list">
-                
-
-                <li class="card">
-                    <img class="card_img" src="https://dev.adalab.es/sphynx-gato.webp" alt="sphynx-cat" />
-                    <h3 class="card_title">Fiona</h3>
-                    <h4 class="card_race">Sphynx</h4>
-                    <p class="card_description">
-                        Produce fascinación y curiosidad. Exótico, raro, bello, extraño…
-                        hasta con pinta de alienígena han llegado a definir a esta raza
-                        gatuna que se caracteriza por la «ausencia» de pelo.
-                    </p>
-                </li>
-                <li class="card">
-                    <img class="card_img" src="https://dev.adalab.es/maine-coon-cat.webp" alt="maine-coon-cat" />
-                    <h3 class="card_title">Cielo</h3>
-                    <h4 class="card_race">Maine Coon</h4>
-                    <p class="card_description">
-                        Tienen la cabeza cuadrada y los ojos simétricos, por lo que su
-                        bella mirada se ha convertido en una de sus señas de identidad.
-                        Sus ojos son grandes y las orejas resultan largas y en punta.
-                    </p>
-                </li>
+               
             </ul>
         </section>
     </main>
@@ -95,4 +74,5 @@
 
 </body>
 
-</html>
+</html> 
+
