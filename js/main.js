@@ -64,3 +64,62 @@ const kittenThree = `<li class="card">
     inputDescription.value = ("");
 
  });
+
+const searchButton = document.querySelector(".js_button-search");
+const descriptionText = document.querySelector(".js_in_search_desc");
+const kittenDescription1 = "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente"
+const kittenDescription2 = "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo"
+const kittenDescription3 = "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta"
+
+const razaText = document.querySelector(".js-raza");
+
+
+searchButton.addEventListener ("click",(event) => {
+    event.preventDefault();
+    const descriptionValue = descriptionText.value;
+    if (kittenDescription1.includes(descriptionValue)) {catList.innerHTML = kittenOne}
+    if (kittenDescription2.includes(descriptionValue)) {catList.innerHTML = kittenTwo}
+    if (kittenDescription3.includes(descriptionValue)) {catList.innerHTML = kittenThree}
+
+    const razaValue = razaText.value;
+    if (razaValue === "") {catList.innerHTML = "¡Uy que despiste, no sabemos su raza!"}
+    else if (razaValue === "Siamés") {catList.innerHTML = kittenOne}
+    else if (razaValue === "Sphynx") {catList.innerHTML = kittenTwo}
+    else if (razaValue === "Maine Coon") {catList.innerHTML = kittenThree}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  const searchButton = document.querySelector(".js_button-search");
+ const descriptionText = document.querySelector(".js_in_search_desc");
+ const razaText = document.querySelector(".js-raza");
+ const kittenDescription1 = "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente."
+ const kittenDescription2 = "Produce fascinación y curiosidad. Exótico, raro, bello, extraño…hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo."
+ const kittenDescription3 = "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta."
+
+ searchButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    const descriptionValue = descriptionText.value;
+     console.log(descriptionValue); 
+    if (kittenDescription1.includes(descriptionValue)) {catList.innerHTML = kittenOne}
+    if (kittenDescription2.includes(descriptionValue)) {catList.innerHTML = kittenTwo}
+    if (kittenDescription3.includes(descriptionValue)) {catList.innerHTML = kittenThree}
+
+    const razaValue = razaText.value;
+    if (razaValue === "") {
+        catList.innerHTML = `Uy que despiste, no sabemos su raza`;
+    } else if (razaValue === "Siamés") {catList.innerHTML = kittenOne}
+    else if (razaValue === "Sphynx") {catList.innerHTML = kittenTwo}
+    else if (razaValue === "Maine Coon") {catList.innerHTML = kittenThree}
+ }) */
