@@ -1,5 +1,5 @@
 'use strict'
-1
+
 const catList = document.querySelector('.list');
 const kittenOne = `<li class="card">
                   
