@@ -88,6 +88,7 @@ searchButton.addEventListener ("click",(event) => {
     else if (razaValue === "Maine Coon") {catList.innerHTML = kittenThree}
 });
 
+
 /* 'use strict'
 
 const catList = document.querySelector('.list');
