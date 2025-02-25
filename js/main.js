@@ -34,9 +34,25 @@ const kittenThree = `<li class="card">
                     <p class="card_description">${kittenDescription3}</p>
                 </li>`
 
-function renderKittenOne()
+/* - selecionar los campos
+   - cuando la usuaria haga click en añadir:
+        . guardar el valor de los inputs
+        . crear la ficha de los gatos con esos valores
+        . mostrar en la web la ficha del gato con esos valores
+*/
 
-catList.innerHTML = kittenOne + kittenTwo + kittenThree;
+function renderKittenOne() {
+
+    `<li class="card">
+                  
+                        <img class="card_img" src="${kittenImage1}" alt="siames-cat"/>
+                        <h3 class="card_title">${kittenName1.toUpperCase()}</h3>
+                        <h4 class="card_race">${kittenRace1}</h4>
+                        <p class="card_description">${kittenDescription1}</p>
+                    </li>`
+  }
+  catList.innerHTML = renderKittenOne();
+  
             
  const plusButton = document.querySelector (".js-btn-add");
  const plusForm = document.querySelector (".js-new-form");
@@ -53,14 +69,14 @@ const buttonAdd = document.querySelector(".js-button-add");
 
 const razaText = document.querySelector(".js-raza");
  
-/*  catList.innerHTML = kittenOne + kittenTwo + kittenThree; */
+ /*catList.innerHTML = kittenOne + kittenTwo + kittenThree;*/
 
 
 
 
     //evento para mostrar y ocultar el formulario usando toggle
 
-    plusButton.addEventListener ("click", () => {
+   /* plusButton.addEventListener ("click", () => {
  
     plusForm.classList.toggle("collapsed");
     inputUrl.value = ("");
@@ -68,7 +84,7 @@ const razaText = document.querySelector(".js-raza");
     inputRaza.value = ("");
     inputDescription.value = ("");
 
- });
+ });*/
 
  cancelButton.addEventListener ("click", () => {
   
@@ -94,6 +110,38 @@ searchButton.addEventListener ("click",(event) => {
     else if (razaValue === "Sphynx") {catList.innerHTML = kittenTwo}
     else if (razaValue === "Maine Coon") {catList.innerHTML = kittenThree}
 });
+
+function showAndHideNewCatForm () {
+    plusForm.classList.toggle("collapsed");
+
+    inputUrl.value = ("");
+    inputName.value = ("");
+    inputRaza.value = ("");
+    inputDescription.value = ("");
+}
+
+plusButton.addEventListener ("click",showAndHideNewCatForm);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
 function showNewCatForm () {
