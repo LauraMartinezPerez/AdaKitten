@@ -44,7 +44,7 @@ const kittenThree = `<li class="card">
  
 const searchButton = document.querySelector(".js_button-search");
 const descriptionText = document.querySelector(".js_in_search_desc");
-
+const buttonAdd = document.querySelector(".js-button-add");
 
 
 const razaText = document.querySelector(".js-raza");
@@ -53,8 +53,11 @@ const razaText = document.querySelector(".js-raza");
 
 
 
- plusButton.addEventListener ("click", () => {
-    // console.log("haz click")
+
+    //evento para mostrar y ocultar el formulario usando toggle
+
+    plusButton.addEventListener ("click", () => {
+ 
     plusForm.classList.toggle("collapsed");
     inputUrl.value = ("");
     inputName.value = ("");
@@ -64,7 +67,7 @@ const razaText = document.querySelector(".js-raza");
  });
 
  cancelButton.addEventListener ("click", () => {
-    /* console.log("click en cancel") */
+  
     plusForm.classList.add("collapsed");
     inputUrl.value = ("");
     inputName.value = ("");
@@ -72,7 +75,6 @@ const razaText = document.querySelector(".js-raza");
     inputDescription.value = ("");
 
  });
-
 
 
 searchButton.addEventListener ("click",(event) => {
@@ -89,3 +91,53 @@ searchButton.addEventListener ("click",(event) => {
     else if (razaValue === "Maine Coon") {catList.innerHTML = kittenThree}
 });
 
+/* 
+function showNewCatForm () {
+    //muestra el formulario
+    plusForm.classList.remove("collapsed");
+    inputUrl.value = ("");
+    inputName.value = ("");
+    inputRaza.value = ("");
+    inputDescription.value = ("");
+}
+
+function hideNewCatForm () {
+    //Oculta el formulario
+    plusForm.classList.add("collapsed");
+    inputUrl.value = ("");
+    inputName.value = ("");
+    inputRaza.value = ("");
+    inputDescription.value = ("");
+}
+
+function handleClickNewCatForm () {
+    if (plusForm.classList.contains("collapsed")) {
+        showNewCatForm ();
+     }
+     else {
+        hideNewCatForm ();
+     }
+    }
+
+plusButton.addEventListener ("click", handleClickNewCatForm);
+
+
+
+function renderKitten(url, name, race, desc) {
+     
+        catList.innerHTML= (`<li class="card">
+            <img class="card_img" src="${url}" alt="siames-cat"/>
+            <h3 class="card_title">${name}</h3>
+            <h4 class="card_race">${race}</h4>
+            <p class="card_description">${desc}</p>
+            </li>`) + kittenOne + kittenTwo + kittenThree
+}
+
+
+buttonAdd.addEventListener("click", (event) => {
+    event.preventDefault();
+    renderKitten(inputUrl.value, inputName.value, inputRaza.value, inputDescription.value, );
+    handleClickNewCatForm ();
+})
+
+ */
