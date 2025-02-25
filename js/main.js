@@ -34,12 +34,6 @@ const kittenThree = `<li class="card">
                     <p class="card_description">${kittenDescription3}</p>
                 </li>`
 
-/* - selecionar los campos
-   - cuando la usuaria haga click en añadir:
-        . guardar el valor de los inputs
-        . crear la ficha de los gatos con esos valores
-        . mostrar en la web la ficha del gato con esos valores
-*/
 
 function renderKittenOne(url, name, race, desc) {
 
@@ -93,19 +87,6 @@ const razaText = document.querySelector(".js-raza");
 
 
 
-
-    //evento para mostrar y ocultar el formulario usando toggle
-
-   /* plusButton.addEventListener ("click", () => {
- 
-    plusForm.classList.toggle("collapsed");
-    inputUrl.value = ("");
-    inputName.value = ("");
-    inputRaza.value = ("");
-    inputDescription.value = ("");
-
- });*/
-
  cancelButton.addEventListener ("click", () => {
   
     plusForm.classList.add("collapsed");
@@ -116,20 +97,26 @@ const razaText = document.querySelector(".js-raza");
 
  });
 
-
-searchButton.addEventListener ("click",(event) => {
+function filterKitten (event) {
     event.preventDefault();
-    const descriptionValue = descriptionText.value;
-    if (kittenDescription1.includes(descriptionValue)) {catList.innerHTML = kittenOne}
-    if (kittenDescription2.includes(descriptionValue)) {catList.innerHTML = kittenTwo}
-    if (kittenDescription3.includes(descriptionValue)) {catList.innerHTML = kittenThree}
+    if (descriptionText.value === "") {
+        catList.innerHTML = "¡Uy que despiste, no has filtrado nada!"
+    }
+    else if (kittenDescription1.includes(descriptionText.value)) {
+        catList.innerHTML = kittenOne;
+    }
+    else if (kittenDescription2.includes(descriptionText.value)) {
+        catList.innerHTML = kittenTwo;
+    }
+    else if (kittenDescription3.includes(descriptionText.value)) {
+        catList.innerHTML = kittenThree;
+    }
+ 
+}
 
-    const razaValue = razaText.value;
-    if (razaValue === "") {catList.innerHTML = "¡Uy que despiste, no sabemos su raza!"}
-    else if (razaValue === "Siamés") {catList.innerHTML = kittenOne}
-    else if (razaValue === "Sphynx") {catList.innerHTML = kittenTwo}
-    else if (razaValue === "Maine Coon") {catList.innerHTML = kittenThree}
-});
+searchButton.addEventListener("click", filterKitten);
+
+
 
 function showAndHideNewCatForm () {
     plusForm.classList.toggle("collapsed");
@@ -141,6 +128,22 @@ function showAndHideNewCatForm () {
 }
 
 plusButton.addEventListener ("click",showAndHideNewCatForm);
+
+
+
+/* searchButton.addEventListener ("click",(event) => {
+    event.preventDefault();
+    const descriptionValue = descriptionText.value;
+    if (kittenDescription1.includes(descriptionValue)) {catList.innerHTML = kittenOne}
+    if (kittenDescription2.includes(descriptionValue)) {catList.innerHTML = kittenTwo}
+    if (kittenDescription3.includes(descriptionValue)) {catList.innerHTML = kittenThree}
+
+    const razaValue = razaText.value;
+    if (razaValue === "") {catList.innerHTML = "¡Uy que despiste, no sabemos su raza!"}
+    else if (razaValue === "Siamés") {catList.innerHTML = kittenOne}
+    else if (razaValue === "Sphynx") {catList.innerHTML = kittenTwo}
+    else if (razaValue === "Maine Coon") {catList.innerHTML = kittenThree}
+}); */
 
 
 
