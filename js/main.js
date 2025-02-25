@@ -33,6 +33,10 @@ const kittenThree = `<li class="card">
                     <h4 class="card_race">${kittenRace3}</h4>
                     <p class="card_description">${kittenDescription3}</p>
                 </li>`
+
+function renderKittenOne()
+
+catList.innerHTML = kittenOne + kittenTwo + kittenThree;
             
  const plusButton = document.querySelector (".js-btn-add");
  const plusForm = document.querySelector (".js-new-form");
@@ -49,7 +53,7 @@ const buttonAdd = document.querySelector(".js-button-add");
 
 const razaText = document.querySelector(".js-raza");
  
- catList.innerHTML = kittenOne + kittenTwo + kittenThree;
+/*  catList.innerHTML = kittenOne + kittenTwo + kittenThree; */
 
 
 
