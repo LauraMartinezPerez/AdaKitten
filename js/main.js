@@ -125,13 +125,13 @@ searchButton.addEventListener("click", filterKitten); */
 const filterKitten = (event) => {
     event.preventDefault();
     if (kittenDescription1.includes(descriptionText.value)) {
-         catList.innerHTML = kittenOne;
+         catList.innerHTML += kittenOne;
     }
     if (kittenDescription2.includes(descriptionText.value)) {
-        catList.innerHTML = kittenTwo;
+        catList.innerHTML += kittenTwo;
    }
    if (kittenDescription3.includes(descriptionText.value)) {
-    catList.innerHTML = kittenThree;
+    catList.innerHTML += kittenThree;
 }
 
 }
