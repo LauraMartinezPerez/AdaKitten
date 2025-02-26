@@ -97,7 +97,7 @@ const razaText = document.querySelector(".js-raza");
 
  });
 
-function filterKitten (event) {
+/* function filterKitten (event) {
     event.preventDefault();
     if (descriptionText.value === "") {
         catList.innerHTML = "¡Uy que despiste, no has filtrado nada!"
@@ -114,8 +114,29 @@ function filterKitten (event) {
  
 }
 
-searchButton.addEventListener("click", filterKitten);
+searchButton.addEventListener("click", filterKitten); */
 
+/* 
+- seleccionar el input descripcion "descriptionText", el boton (submit) "searchButton", y donde se muestra "catList"
+- cuando usuario escriba una palabra y haga clic, mostrar ficha de gatito
+    - funcion:
+        -si el valor del input esta inlcuido en la descripcion de un gato, me muestra ese gato*/
+
+const filterKitten = (event) => {
+    event.preventDefault();
+    if (kittenDescription1.includes(descriptionText.value)) {
+         catList.innerHTML = kittenOne;
+    }
+    if (kittenDescription2.includes(descriptionText.value)) {
+        catList.innerHTML = kittenTwo;
+   }
+   if (kittenDescription3.includes(descriptionText.value)) {
+    catList.innerHTML = kittenThree;
+}
+
+}
+
+searchButton.addEventListener("click", filterKitten);
 
 
 function showAndHideNewCatForm () {
@@ -144,24 +165,6 @@ plusButton.addEventListener ("click",showAndHideNewCatForm);
     else if (razaValue === "Sphynx") {catList.innerHTML = kittenTwo}
     else if (razaValue === "Maine Coon") {catList.innerHTML = kittenThree}
 }); */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
