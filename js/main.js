@@ -13,7 +13,7 @@ const kittenName3 = "Cielo"
 const kittenRace1 = "Siamés"
 const kittenRace2 = "Sphynx"
 const kittenRace3 = "Maine Coon"
-const kittenOne = `<li class="card">
+/* const kittenOne = `<li class="card">
                   
                         <img class="card_img" src="${kittenImage1}" alt="siames-cat"/>
                         <h3 class="card_title">${kittenName1.toUpperCase()}</h3>
@@ -32,8 +32,15 @@ const kittenThree = `<li class="card">
                     <h3 class="card_title">${kittenName3.toUpperCase()}</h3>
                     <h4 class="card_race">${kittenRace3}</h4>
                     <p class="card_description">${kittenDescription3}</p>
-                </li>`
+                </li>` */
 
+
+                const kittenData_1 = {
+                    image: 'https://dev.adalab.es/gato-siames.webp',
+                    name: 'Anastacio',
+                    desc: ' Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.',
+                    race: 'Siamés',
+                  };                
 
 function renderKittenOne(url, name, race, desc) {
 
