@@ -35,25 +35,25 @@ const kittenThree = `<li class="card">
                 </li>`*/
 
 
-/* function renderKitten_1(kittenData_1) {
-    `
-    <li class="card">
-                    <img class="card_img" src="${kittenData_1.img}" alt="maine-coon-cat"/>
-                    <h3 class="card_title">${kittenData_1.name}</h3>
-                    <h4 class="card_race">${kittenData_1.race}</h4>
-                    <p class="card_description">${kittenData_1.desc}</p>
-                </li>
-    `
-}
+
 const kittenData_1 = {
     img: "https://dev.adalab.es/gato-siames.webp",
     name: "Anastacio",
     race: "Siamés",
     desc : "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente"
-
-   
 };
-
+const kittenData_2 = {
+    img: "https://dev.adalab.es/sphynx-gato.webp",
+    name: "Fiona",
+    race: "Sphynx",
+    desc : "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo"
+};
+const kittenData_3 = {
+    img: "https://dev.adalab.es/maine-coon-cat.webp",
+    name: "Cielo",
+    race: "Maine Coon",
+    desc : "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta"
+};
 function renderKitten(url, name, race, desc) {
 
     return `<li class="card">
@@ -64,8 +64,7 @@ function renderKitten(url, name, race, desc) {
                         <p class="card_description">${desc}</p>
                     </li>`
   }
-
-  catList.innerHTML = renderKitten(kittenImage1, kittenName1, kittenRace1, kittenDescription1) + renderKitten(kittenImage2, kittenName2, kittenRace2, kittenDescription2) + renderKitten(kittenImage3, kittenName3, kittenRace3, kittenDescription3); 
+  catList.innerHTML = renderKitten(kittenData_1.img, kittenData_1.name, kittenData_1.race, kittenData_1.desc) + renderKitten(kittenData_2.img, kittenData_2.name, kittenData_2.race, kittenData_2.desc) + renderKitten(kittenData_3.img, kittenData_3.name, kittenData_3.race, kittenData_3.desc);
 
 
  const plusButton = document.querySelector (".js-btn-add");
