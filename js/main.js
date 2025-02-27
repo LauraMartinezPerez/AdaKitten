@@ -40,37 +40,10 @@ const kittenData_1 = {
     race: "Siamés",
     desc : "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente"
 
-    catList.innerHTML = `<li class="card">
-                  
-                        <img class="card_img" src="${kittenImage1}" alt="siames-cat"/>
-                        <h3 class="card_title">${kittenName1.toUpperCase()}</h3>
-                        <h4 class="card_race">${kittenRace1}</h4>
-                        <p class="card_description">${kittenDescription1}</p>
-                    </li>` ;
+   
 };
 
-    function renderKittenOne(kittenData_1){
-
-    }
-
-
-   
-
-
-
-
-
-/*function renderKittenOne(url, name, race, desc) {
-
-    return `<li class="card">
-                  
-                        <img class="card_img" src="${url}" alt="siames-cat"/>
-                        <h3 class="card_title">${name.toUpperCase()}</h3>
-                        <h4 class="card_race">${race}</h4>
-                        <p class="card_description">${desc}</p>
-                    </li>`
-  }*/
-  function renderKittenTwo(url, name, race, desc) {
+function renderKitten(url, name, race, desc) {
 
     return `<li class="card">
                   
@@ -80,17 +53,8 @@ const kittenData_1 = {
                         <p class="card_description">${desc}</p>
                     </li>`
   }
-  function renderKittenThree(url, name, race, desc) {
 
-    return `<li class="card">
-                  
-                        <img class="card_img" src="${url}" alt="siames-cat"/>
-                        <h3 class="card_title">${name.toUpperCase()}</h3>
-                        <h4 class="card_race">${race}</h4>
-                        <p class="card_description">${desc}</p>
-                    </li>`
-  }
-  /*catList.innerHTML = renderKittenOne(kittenImage1, kittenName1, kittenRace1, kittenDescription1) + renderKittenTwo(kittenImage2, kittenName2, kittenRace2, kittenDescription2) + renderKittenThree(kittenImage3, kittenName3, kittenRace3, kittenDescription3); */
+  catList.innerHTML = renderKitten(kittenImage1, kittenName1, kittenRace1, kittenDescription1) + renderKitten(kittenImage2, kittenName2, kittenRace2, kittenDescription2) + renderKitten(kittenImage3, kittenName3, kittenRace3, kittenDescription3); 
 
 
  const plusButton = document.querySelector (".js-btn-add");
