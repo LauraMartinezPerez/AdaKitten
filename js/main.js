@@ -13,7 +13,7 @@ const kittenName3 = "Cielo"
 const kittenRace1 = "Siamés"
 const kittenRace2 = "Sphynx"
 const kittenRace3 = "Maine Coon"
-/* const kittenOne = `<li class="card">
+/*const kittenOne = `<li class="card">
                   
                         <img class="card_img" src="${kittenImage1}" alt="siames-cat"/>
                         <h3 class="card_title">${kittenName1.toUpperCase()}</h3>
@@ -32,37 +32,29 @@ const kittenThree = `<li class="card">
                     <h3 class="card_title">${kittenName3.toUpperCase()}</h3>
                     <h4 class="card_race">${kittenRace3}</h4>
                     <p class="card_description">${kittenDescription3}</p>
-                </li>` */
+                </li>`*/
 
 
-                const kittenData_1 = {
-                    image: 'https://dev.adalab.es/gato-siames.webp',
-                    name: 'Anastacio',
-                    desc: ' Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.',
-                    race: 'Siamés',
-                  };                
+/* function renderKitten_1(kittenData_1) {
+    `
+    <li class="card">
+                    <img class="card_img" src="${kittenData_1.img}" alt="maine-coon-cat"/>
+                    <h3 class="card_title">${kittenData_1.name}</h3>
+                    <h4 class="card_race">${kittenData_1.race}</h4>
+                    <p class="card_description">${kittenData_1.desc}</p>
+                </li>
+    `
+}
+const kittenData_1 = {
+    img: "https://dev.adalab.es/gato-siames.webp",
+    name: "Anastacio",
+    race: "Siamés",
+    desc : "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente"
+};
+ */
 
-function renderKittenOne(url, name, race, desc) {
 
-    return `<li class="card">
-                  
-                        <img class="card_img" src="${url}" alt="siames-cat"/>
-                        <h3 class="card_title">${name.toUpperCase()}</h3>
-                        <h4 class="card_race">${race}</h4>
-                        <p class="card_description">${desc}</p>
-                    </li>`
-  }
-  function renderKittenTwo(url, name, race, desc) {
-
-    return `<li class="card">
-                  
-                        <img class="card_img" src="${url}" alt="siames-cat"/>
-                        <h3 class="card_title">${name.toUpperCase()}</h3>
-                        <h4 class="card_race">${race}</h4>
-                        <p class="card_description">${desc}</p>
-                    </li>`
-  }
-  function renderKittenThree(url, name, race, desc) {
+function renderKitten(url, name, race, desc) {
 
     return `<li class="card">
                   
@@ -72,7 +64,8 @@ function renderKittenOne(url, name, race, desc) {
                         <p class="card_description">${desc}</p>
                     </li>`
   }
-  catList.innerHTML = renderKittenOne(kittenImage1, kittenName1, kittenRace1, kittenDescription1) + renderKittenTwo(kittenImage2, kittenName2, kittenRace2, kittenDescription2) + renderKittenThree(kittenImage3, kittenName3, kittenRace3, kittenDescription3);
+
+  catList.innerHTML = renderKitten(kittenImage1, kittenName1, kittenRace1, kittenDescription1) + renderKitten(kittenImage2, kittenName2, kittenRace2, kittenDescription2) + renderKitten(kittenImage3, kittenName3, kittenRace3, kittenDescription3); 
 
 
  const plusButton = document.querySelector (".js-btn-add");
