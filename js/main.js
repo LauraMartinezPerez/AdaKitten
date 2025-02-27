@@ -13,7 +13,7 @@ const kittenName3 = "Cielo"
 const kittenRace1 = "Siamés"
 const kittenRace2 = "Sphynx"
 const kittenRace3 = "Maine Coon"
-const kittenOne = `<li class="card">
+/*const kittenOne = `<li class="card">
                   
                         <img class="card_img" src="${kittenImage1}" alt="siames-cat"/>
                         <h3 class="card_title">${kittenName1.toUpperCase()}</h3>
@@ -32,10 +32,35 @@ const kittenThree = `<li class="card">
                     <h3 class="card_title">${kittenName3.toUpperCase()}</h3>
                     <h4 class="card_race">${kittenRace3}</h4>
                     <p class="card_description">${kittenDescription3}</p>
-                </li>`
+                </li>`*/
+
+const kittenData_1 = {
+    img: "https://dev.adalab.es/gato-siames.webp",
+    name: "Anastacio",
+    race: "Siamés",
+    desc : "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente"
+
+    catList.innerHTML = `<li class="card">
+                  
+                        <img class="card_img" src="${kittenImage1}" alt="siames-cat"/>
+                        <h3 class="card_title">${kittenName1.toUpperCase()}</h3>
+                        <h4 class="card_race">${kittenRace1}</h4>
+                        <p class="card_description">${kittenDescription1}</p>
+                    </li>` ;
+};
+
+    function renderKittenOne(kittenData_1){
+
+    }
 
 
-function renderKittenOne(url, name, race, desc) {
+   
+
+
+
+
+
+/*function renderKittenOne(url, name, race, desc) {
 
     return `<li class="card">
                   
@@ -44,7 +69,7 @@ function renderKittenOne(url, name, race, desc) {
                         <h4 class="card_race">${race}</h4>
                         <p class="card_description">${desc}</p>
                     </li>`
-  }
+  }*/
   function renderKittenTwo(url, name, race, desc) {
 
     return `<li class="card">
@@ -65,7 +90,7 @@ function renderKittenOne(url, name, race, desc) {
                         <p class="card_description">${desc}</p>
                     </li>`
   }
-  catList.innerHTML = renderKittenOne(kittenImage1, kittenName1, kittenRace1, kittenDescription1) + renderKittenTwo(kittenImage2, kittenName2, kittenRace2, kittenDescription2) + renderKittenThree(kittenImage3, kittenName3, kittenRace3, kittenDescription3);
+  /*catList.innerHTML = renderKittenOne(kittenImage1, kittenName1, kittenRace1, kittenDescription1) + renderKittenTwo(kittenImage2, kittenName2, kittenRace2, kittenDescription2) + renderKittenThree(kittenImage3, kittenName3, kittenRace3, kittenDescription3); */
 
 
  const plusButton = document.querySelector (".js-btn-add");
