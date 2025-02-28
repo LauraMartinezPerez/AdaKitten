@@ -54,6 +54,26 @@ const kittenData_3 = {
     race: "Maine Coon",
     desc : "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta"
 };
+
+
+const kittenDataList = [kittenData_1, kittenData_2, kittenData_3]
+
+function renderKitten(patata) {
+
+    return `<li class="card">
+                  
+                        <img class="card_img" src="${patata.img}" alt="siames-cat"/>
+                        <h3 class="card_title">${patata.name}</h3>
+                        <h4 class="card_race">${patata.race}</h4>
+                        <p class="card_description">${patata.desc}</p>
+                    </li>`
+  }
+
+catList.innerHTML = renderKitten(kittenDataList[0]) + renderKitten(kittenDataList[1]) + renderKitten(kittenDataList[2]);
+
+
+
+/* 
 function renderKitten(url, name, race, desc) {
 
     return `<li class="card">
@@ -64,7 +84,7 @@ function renderKitten(url, name, race, desc) {
                         <p class="card_description">${desc}</p>
                     </li>`
   }
-  catList.innerHTML = renderKitten(kittenData_1.img, kittenData_1.name, kittenData_1.race, kittenData_1.desc) + renderKitten(kittenData_2.img, kittenData_2.name, kittenData_2.race, kittenData_2.desc) + renderKitten(kittenData_3.img, kittenData_3.name, kittenData_3.race, kittenData_3.desc);
+  catList.innerHTML = renderKitten(kittenData_1.img, kittenData_1.name, kittenData_1.race, kittenData_1.desc) + renderKitten(kittenData_2.img, kittenData_2.name, kittenData_2.race, kittenData_2.desc) + renderKitten(kittenData_3.img, kittenData_3.name, kittenData_3.race, kittenData_3.desc); */
 
 
  const plusButton = document.querySelector (".js-btn-add");
