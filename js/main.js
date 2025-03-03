@@ -69,7 +69,32 @@ function renderKitten(patata) {
                     </li>`
   }
 
-catList.innerHTML = renderKitten(kittenDataList[0]) + renderKitten(kittenDataList[1]) + renderKitten(kittenDataList[2]);
+for (const kittenData of kittenDataList) {
+    catList.innerHTML += `<li class="card">
+                  
+                        <img class="card_img" src="${kittenData.img}" alt="siames-cat"/>
+                        <h3 class="card_title">${kittenData.name}</h3>
+                        <h4 class="card_race">${kittenData.race}</h4>
+                        <p class="card_description">${kittenData.desc}</p>
+                    </li>`
+}
+
+/* for (let i = 0; i < kittenDataList.length; i++) {
+    
+    catList.innerHTML += `<li class="card">
+                  
+                        <img class="card_img" src="${kittenDataList[i].img}" alt="siames-cat"/>
+                        <h3 class="card_title">${kittenDataList[i].name}</h3>
+                        <h4 class="card_race">${kittenDataList[i].race}</h4>
+                        <p class="card_description">${kittenDataList[i].desc}</p>
+                    </li>`
+}       */              
+
+
+
+
+
+/* catList.innerHTML = renderKitten(kittenDataList[0]) + renderKitten(kittenDataList[1]) + renderKitten(kittenDataList[2]); */
 
 
 
@@ -141,7 +166,7 @@ searchButton.addEventListener("click", filterKitten); */
     - funcion:
         -si el valor del input esta inlcuido en la descripcion de un gato, me muestra ese gato*/
 
-const filterKitten = (event) => {
+/* const filterKitten = (event) => {
     event.preventDefault();
     if (kittenDescription1.includes(descriptionText.value)) {
          catList.innerHTML += kittenOne;
@@ -154,6 +179,29 @@ const filterKitten = (event) => {
 }
 
 }
+ */
+
+function filterKitten (event) {
+    event.preventDefault();
+   const valorDescriptionText = descriptionText.value;
+    catList.innerHTML = "";
+    for (const kittenData of kittenDataList) {
+       if (kittenData.desc.includes(valorDescriptionText))
+        { catList.innerHTML += renderKitten(kittenData);
+    }
+}
+}
+
+/* function renderKitten(patata) {
+
+    return `<li class="card">
+                  
+                        <img class="card_img" src="${patata.img}" alt="siames-cat"/>
+                        <h3 class="card_title">${patata.name}</h3>
+                        <h4 class="card_race">${patata.race}</h4>
+                        <p class="card_description">${patata.desc}</p>
+                    </li>`
+  } */
 
 searchButton.addEventListener("click", filterKitten);
 
