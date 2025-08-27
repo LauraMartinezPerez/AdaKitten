@@ -1,107 +1,125 @@
-# Ejercicio para el pair programming
+![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
 
-Hemos creado este ejercicio para que lo hagáis durante la hora de pair programming entre tu compañera y tú. Este ejercicio es incremental, es decir, cada día vamos a ir añadiendo las nuevas funcionalidades que hemos aprendido.
+# Adalab web starter kit
 
-- En estos materiales encontraréis el enunciado de las tareas que debes hacer cada día.
-- Es obligatorio que lo hagáis en la hora de pair programming.
-- Aquí os enseñamos trucos y buenas prácticas.
-- Cuando a mitad de módulo cambies de pareja tendrás que seguir trabajando sobre tu ejercicio o el de tu nueva pareja.
+Ahoy! Este es nuestro Starter Kit creado en **node y vite**. ¿Y qué es un Starter kit? Pues es una **plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas**.
 
-# Aplicación AdaKitten 🐈
+Este Kit incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local y muchas cosas más. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
 
-¿A quién no le gustan los gatitos 🐈? Las mascotas forman parte de nuestra vida, son nuestra familia, compañeros de trabajo, y seguro que ahora mismo muchas de nosotras tenemos uno o varios a nuestro lado.
-Os proponemos trabajar en AdaKitten🐈, una aplicación donde guardamos la información de los gatitos que pasan por Adalab. ¿Te apuntas a programar desde cero esta aplicación?
+En el Kit hay 3 tipos de ficheros y carpetas:
 
-### Descripción de la aplicación
+- Los ficheros que están sueltos en la raíz del repositorio, como vite.config.js, package.json... Son la configuración del proyecto y no necesitamos modificarlos (excepto este README.md, para describir tu proyecto).
+- La carpeta `src/`: son los ficheros de nuestra página web, como HTML, CSS, JS...
+- La carpeta `public/`, que tiene fichero estáticos como imágenes, fuentes, favicon, librerías de JavaScript antiguas (jQuery, ...)
+- Y la carpeta `docs/`, que es generada automáticamente cuando arrancamos el proyecto. El Kit lee los ficheros que hay dentro de `src/` y `public/`, los procesa y los genera dentro de `public/` y `docs/`.
 
-El objetivo de la aplicación es guardar información general sobre gatos, y hemos elegido hacerlo con los gatos de las Adalabers. Esta aplicación es replicable y extensible a cualquier temática: perros, listado de productos, contactos.
+## Guía de inicio rápido
 
-![Adacats Aplicación](./img/adakitten_template.png)
+> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) con una versión superior a la 14 para trabajar con este Starter Kit:
 
-La aplicación está compuesta por una única página que contiene:
+### Pasos a seguir cada vez que queremos arrancar un proyecto desde cero:
 
-1. Una cabecera que contiene una sección para buscar por un nombre, raza o alguna característica.
+1. **Crea tu propio repositorio.**
+1. Descarga este **Starter kit desde GitHub**.
+   - No recomendamos que clones este repo ya que no podrás añadir commits.
+1. **Copia todos los ficheros** de este Starter kit en la carpeta raíz de tu repositorio.
+   - Recuerda que debes copiar **también los ficheros ocultos** que comienzan por un punto.
+   - Si has decidido clonar este repo, no debes copiar la carpeta `.git`. Si lo haces estarás machacando tu propio repositorio.
+1. **Abre una terminal** en la carpeta raíz de tu repositorio.
+1. **Instala las dependencias** locales ejecutando en la terminal el comando:
 
-2. La sección principal es un listado en forma de tarjetas donde se muestra la información de los gatitos: foto, nombre, raza, y una descripción para contar lo que hace único a cada gato.
+```bash
+npm install
+```
 
-3. Por último, podemos añadir nuevos gatitos pulsando sobre el botón "+" que mostrará un formulario para rellenar los datos.
+### Pasos para arrancar el proyecto:
 
-### ¿Qué encontramos en este repositorio ?
+Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. **El proyecto hay que arrancarlo cada vez que te pongas a programar.** Para ello ejecuta el comando:
 
-En este repositorio encontrarás el html y los estilos de la página, aunque puedes cambiar la visualidad de la aplicación si queréis y ser tan creativas como queráis. Os recomendamos que lo hagáis luego que hayamos terminado el curso, ahora nos concentraremos en JS.
+```bash
+npm run dev
+```
 
-Para que sepáis que vamos haciendo durante el módulo, os dejamos el listado de tareas que tienen que completar por lección, asi saben cada momento por donde váis.
+Este comando:
 
-La solución del ejercicio completo se subirá al final del módulo, si en una sesión de pair programing no habéis terminado el ejercicio, lo continúan al día siguiente, lo importante es que vayáis aprendiendo y entendáis lo que hacen.
+- **Abre una ventana de Chrome y muestra tu página web**, al igual que hace el plugin de VS Code Live Server (Go live).
+- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en Chrome**.
+- También **procesa los ficheros** HTML, SASS / CSS y JS. Por ejemplo:
+   - Convierte los ficheros SASS en CSS.
+   - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
 
-## Qué vas hacer cada día
+Después de ejecutar `npm run dev` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
 
-#### 2.1 Intro a la programación:
+### Pasos para publicar el proyecto en GitHub Pages:
 
-- [x] 1. Crea el proyecto
-- [ ] 2. Entiende el código html y css del proyecto
-- [ ] 3. **LISTADO:** Listado: Mostrar gatitos desde JS
+Para generar tu página para producción ejecuta el comando:
 
-#### 2.2 Intro a la programación 2:
+```bash
+npm run build
+```
 
-- [ ] 1. **LISTADO:** Mejora como se guarda la información
-- [ ] 2. **LISTADO - Bonus:** Nombre de gatitos en mayúsculas
+Y a continuación:
 
-#### 2.3 Condicionales:
+1. Sube a tu repo la carpeta `docs/` que se te acaba de generar.
+1. Entra en la pestaña `settings` de tu repo.
+1. Y en el apartado de GitHub Pages activa la opción **master branch /docs folder**.
+1. Y ya estaría!!!
 
-- [ ] 1. **FILTRAR:** Búsqueda por descripción.
-- [ ] 2. **LISTADO - Bonus:**: ¿Y si no hay raza?.
+Además, los comandos:
 
-#### 2.4 Eventos:
+```bash
+npm run push-docs
+```
+o
 
-- [ ] 1. **FORMULARIO:** Adicionar nuevo gatito.
-- [ ] 2. **FORMULARIO:** Cancelar formulario.
+```bash
+npm run deploy
+```
 
-#### 2.5 Funciones I:
+son un atajo que nos genera la versión de producción y hace push de la carpeta `docs/` del tirón. Te recomendamos ver el fichero `package.json` para aprender cómo funciona.
+<!--
+## Flujo de archivos con Gulp
 
-- [ ] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
-- [ ] 2. **FORMULARIO:** Adicionar nuevo gatito.
-- [ ] 3. **LISTADO:** Crear el gatito en HTML
+Estas tareas de Gulp producen el siguiente flujo de archivos:
 
-#### 2.6 Funciones II:
+![Gulp flow](./gulp-flow.png)
 
-- [ ] 1. **FILTRAR:** Filtrar por descripción.
-- [ ] 2. **LISTADO - Bonus:**: ¿Y si no hay raza?.
-- [ ] 3. **BONUS:** Funciones dentro de funciones.
-- [ ] 4. **FORMULARIO - Bonus::** Cancelar formulario.
+## `gulpfile.js` y `config.json`
 
-#### 2.7 Objetos
+Nuestro **gulpfile.js** usa el fichero `config.json` de configuración con las rutas de los archivos a generar / observar.
 
-- [ ] 1. **LISTADO:** Convertir cada gatito en un objeto
+De esta manera separarmos las acciones que están en `gulpfile.js` de la configuración de las acciones que están en `config.json`.
+-->
+## Estructura de carpetas
 
-#### 2.8 Arrays
+La estructura de carpetas tiene esta pinta:
 
-- [ ] 1. **LISTADO:** Crear listado de gatitos I
+```
+src
+ ├─ api // los ficheros de esta carpeta se copian en public/api/
+ |  └─ data.json
+ ├─ images
+ |  └─ logo.jpg
+ ├─ js // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
+ |  ├─ main.js
+ |  └─ events.js
+ ├─ scss
+ |  ├─ components
+ |  ├─ core
+ |  ├─ layout
+ |  └─ pages
+ └─ html
+    └─ partials
+```
 
-#### 2.9 Bucles
+> **NOTA:** Los partials de HTML y SASS del proyecto son orientativos. Te recomendamos usar los que quieras, y borrar los que no uses.
+<!--
+## Vídeotutoriales del Starter kit
 
-- [ ] 1. **LISTADO:** Crear listado de gatitos II
-- [ ] 2. **FILTRAR:**: Filtrar por descripción
+- [Qué es, trabajar con la versión de desarrollo y rutas relativas](https://www.youtube.com/watch?v=XwvhXvBijos)
+- [Migración de un proyecto, trabajar con la versión de producción y GitHub Pages](https://www.youtube.com/watch?v=qqGClcgt9Uc)
+- [Motor de plantillas](https://www.youtube.com/watch?v=4GwXOJ045Zg)
+-->
+## Falta algo?
 
-#### 2.11 Arrays II
-
-- [ ] 1. Conoce el trabajo de tu pareja
-- [ ] 2. **FORMULARIO:** Agregar un nuevo gatito al listado
-
-#### 2.12 Métodos funcionales de arrays
-
-- [ ] 1. **FILTRAR:** Filtrar por descripción
-- [ ] 2. **FILTRAR:** Filtrar por descripción y por raza
-
-#### 2.13 Peticiones al servidor I
-
-- [ ] 1. **LISTADO:** Obtener listado de gatitos desde el servidor
-
-#### 2.14 Peticiones al servidor II
-
-- [ ] 1. **LISTADO:** Guardar en el local storage
-- [ ] 1. **BONUS - FORMULARIO:** Crear un nuevo gatito en el servidor
-
-#### 2.15 DOM Avanzado
-
-- [ ] 1. **LISTADO:** Cambiar a DOM Avanzado
+Echas de menos que el kit haga algo en concreto? Pidelo sin problema a través de las issues o si te animas a mejorarlo mándanos un PR :)
