@@ -61,7 +61,7 @@ plusButton.addEventListener('click', () => {
     inputDescription.value = '';
 });
 
-//pintar ficha de gatitos con los datos del form
+//añadir y pintar nuevo gatito
 
 buttonAdd.addEventListener('click', event => {
     event.preventDefault();
@@ -71,7 +71,15 @@ buttonAdd.addEventListener('click', event => {
         race: inputRaza.value,
         desc: inputDescription.value
     };
+
+    kittenDataList.push(newKitten);
     renderKitten(newKitten);
+    console.log(kittenDataList);
+    plusForm.classList.add('collapsed');
+    inputUrl.value = '';
+    inputName.value = '';
+    inputRaza.value = '';
+    inputDescription.value = '';
 });
 
 cancelButton.addEventListener('click', event => {
